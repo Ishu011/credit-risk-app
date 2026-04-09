@@ -8,7 +8,7 @@ model = pickle.load(open("model.pkl", "rb"))
 
 st.set_page_config(page_title="Credit Risk Predictor", layout="centered")
 
-st.title("💳 Credit Risk Prediction System")
+st.title("💳 Credit Risk Prediction App")
 st.write("Enter customer details to predict default risk")
 
 
@@ -88,9 +88,9 @@ if st.button("Predict Risk"):
     st.subheader("Result")
 
     if prediction == 1:
-        st.error("⚠️ High Risk Customer")
+        st.error(" High Risk Customer")
     else:
-        st.success("✅ Low Risk Customer")
+        st.success(" Low Risk Customer")
 
-    st.write(f"📊 Default Probability: {probability:.2f}")
-    st.write(f"📌 Risk Category: {risk}")
+    st.write(f" Default Probability: {probability:.2f}")
+    st.write(f" Risk Category: {risk}")
